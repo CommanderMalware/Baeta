@@ -26,7 +26,7 @@ import org.usfirst.frc5509.Baeta.subsystems.*;
  * directory.
  */
 public class Robot extends IterativeRobot {
-	//TESTING GITHUB
+	
     Command autonomousCommand;
     Command wenchUp;
     Command wenchDown;
