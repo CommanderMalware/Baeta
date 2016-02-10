@@ -13,10 +13,11 @@ package org.usfirst.frc5509.Baeta.subsystems;
 
 import org.usfirst.frc5509.Baeta.RobotMap;
 import org.usfirst.frc5509.Baeta.commands.*;
+
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
-
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 
 /**
@@ -38,11 +39,17 @@ public class Weainch extends Subsystem {
     // here. Call these from Commands.
 
     public static void moveWenUp(){
-    	wench.set(.5);
+    	SmartDashboard.putNumber("Inside moveWenUp ", 3);
+    	wench.set(1, (byte)0);
+    	SmartDashboard.putNumber("Inside moveWenUp2 ", 4);
     }
     
     public static void moveWenDown(){
-    	wench.set(-.5);
+    	wench.set(-1);
+    }
+    
+    public static void stopWench(){
+    	wench.set(0, (byte)0);
     }
     
     

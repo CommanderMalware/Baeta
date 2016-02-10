@@ -12,6 +12,7 @@
 package org.usfirst.frc5509.Baeta.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc5509.Baeta.Robot;
 import org.usfirst.frc5509.Baeta.subsystems.Weainch;
@@ -45,6 +46,7 @@ public class WenchUp extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	SmartDashboard.putNumber("Inside wench command ", 2);
     	Weainch.moveWenUp();
     	
     }

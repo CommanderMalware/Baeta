@@ -66,7 +66,7 @@ public class OI {
         
         joystick1 = new Joystick(0);
         
-        joystickButton2 = new JoystickButton(joystick1, 1);
+        joystickButton2 = new JoystickButton(joystick1, 2);
         joystickButton2.whileHeld(new WenchDown());
         joystickButton1 = new JoystickButton(joystick1, 1);
         joystickButton1.whileHeld(new WenchUp());
