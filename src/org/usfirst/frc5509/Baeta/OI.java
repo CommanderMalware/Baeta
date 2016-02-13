@@ -55,6 +55,8 @@ public class OI {
     public JoystickButton joystickButton1;
     public JoystickButton joystickButton2;
     public JoystickButton joystickButton4;
+    public JoystickButton joystickButton5;
+    public JoystickButton joystickButton6;
     public Joystick joystick1;
     public Joystick joystick2;
 
@@ -72,7 +74,11 @@ public class OI {
         joystickButton1 = new JoystickButton(joystick1, 1);
         joystickButton1.whileHeld(new WenchUp());
         joystickButton4 = new JoystickButton(joystick1, 4);
-
+        
+        joystickButton5 = new JoystickButton(joystick1, 5);
+        joystickButton5.whileHeld(new BallBoxDown());
+        joystickButton6 = new JoystickButton(joystick1, 6);
+        joystickButton6.whileHeld(new BallBoxUp());
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());

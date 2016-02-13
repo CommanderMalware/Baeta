@@ -13,6 +13,7 @@ package org.usfirst.frc5509.Baeta.commands;
 import org.usfirst.frc5509.Baeta.Robot;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+//import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Command;
 
 
@@ -54,4 +55,5 @@ public class BallBoxDown extends Command {
 	// subsystems is scheduled to run
 	protected void interrupted() {
 	}
+	
 }

@@ -42,8 +42,8 @@ public class Drive extends Subsystem {
     
     public void DriveRobot(double x, double y)
     {
-    	y = y * .65;
-    	x = x * .65;
+    	y = y * 1;
+    	x = x * 1;
     	
     	if(y < .15 && y > -.15){
     		y = 0;

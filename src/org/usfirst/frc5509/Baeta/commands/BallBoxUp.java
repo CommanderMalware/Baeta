@@ -55,4 +55,3 @@ public class BallBoxUp extends Command {
 	protected void interrupted() {
 	}
 }
-
