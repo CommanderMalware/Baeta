@@ -40,16 +40,16 @@ public class Weainch extends Subsystem {
 
     public static void moveWenUp(){
     	SmartDashboard.putNumber("Inside moveWenUp ", 3);
-    	wench.set(1, (byte)0);
+    	wench.set(.2);
     	SmartDashboard.putNumber("Inside moveWenUp2 ", 4);
     }
     
     public static void moveWenDown(){
-    	wench.set(-1);
+    	wench.set(-.2);
     }
     
     public static void stopWench(){
-    	wench.set(0, (byte)0);
+    	wench.set(0);
     }
     
     
