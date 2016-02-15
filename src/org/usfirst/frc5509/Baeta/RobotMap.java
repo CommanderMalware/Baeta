@@ -37,6 +37,7 @@ public class RobotMap {
     public static RobotDrive driveRobotDrive21;
     public static SpeedController weainchWench;
     public static SpeedController ball_MechControl_Mech;
+    public static SpeedController ballBox;
     public static Gyro subsystem1Gyro1;
     //public static Compressor pneumaticsCompressor;
     //public static DoubleSolenoid pneumaticsDoubleSolenoid;
@@ -67,7 +68,8 @@ public class RobotMap {
         subsystem1Gyro1 = new ADXRS450_Gyro();
         LiveWindow.addSensor("Subsystem 1", "Gyro 1", (LiveWindowSendable) subsystem1Gyro1);
 
-        
+        ballBox = new Talon(4);
+        LiveWindow.addActuator("BallBox", "BoxWench", (Talon) ballBox);
 //pneumaticsCompressor = new Compressor(0);
         
         
