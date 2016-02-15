@@ -45,9 +45,9 @@ public class BallPokeIn extends Command {
 
 	// Called once after isFinished returns true
 	protected void end() {
-		if(Robot.pneumatic2.equals(DoubleSolenoid.Value.kReverse)){
+		if(Robot.pneumatic.equals(DoubleSolenoid.Value.kReverse)){
 			
-		} else {Robot.pneumatic2.set(DoubleSolenoid.Value.kReverse);}
+		} else {Robot.pneumatic.set(DoubleSolenoid.Value.kReverse);}
 	}
 
 	// Called when another command which requires one or more of the same

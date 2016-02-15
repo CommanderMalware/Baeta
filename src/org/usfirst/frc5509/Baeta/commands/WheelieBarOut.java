@@ -13,15 +13,16 @@ package org.usfirst.frc5509.Baeta.commands;
 import org.usfirst.frc5509.Baeta.Robot;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
+//import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Command;
 
 
 /**
  *
  */
-public class BallPokeOut extends Command {
+public class WheelieBarOut extends Command {
 
-	public BallPokeOut() {
+	public WheelieBarOut() {
 		// Use requires() here to declare subsystem dependencies
 		// eg. requires(chassis);
 
@@ -45,13 +46,14 @@ public class BallPokeOut extends Command {
 
 	// Called once after isFinished returns true
 	protected void end() {
-		if(Robot.pneumatic.equals(DoubleSolenoid.Value.kForward)){
+		if(Robot.pneumatic2.equals(DoubleSolenoid.Value.kForward)){
 			
-		} else {Robot.pneumatic.set(DoubleSolenoid.Value.kForward);}
+		} else {Robot.pneumatic2.set(DoubleSolenoid.Value.kForward);}
 	}
 
 	// Called when another command which requires one or more of the same
 	// subsystems is scheduled to run
 	protected void interrupted() {
 	}
+	
 }

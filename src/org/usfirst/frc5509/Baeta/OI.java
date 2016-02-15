@@ -76,9 +76,9 @@ public class OI {
         joystickButton4 = new JoystickButton(joystick1, 4);
         
         joystickButton5 = new JoystickButton(joystick1, 5);
-        joystickButton5.whileHeld(new BallBoxDown());
+        joystickButton5.whileHeld(new WheelieBarOut());
         joystickButton6 = new JoystickButton(joystick1, 6);
-        joystickButton6.whileHeld(new BallBoxUp());
+        joystickButton6.whileHeld(new WheelieBarIn());
 
         // SmartDashboard Buttons
         SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
