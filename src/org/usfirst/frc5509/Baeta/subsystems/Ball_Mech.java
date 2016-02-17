@@ -19,6 +19,7 @@ import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 
+
 /**
  *
  */
@@ -38,7 +39,7 @@ public class Ball_Mech extends Subsystem {
     // here. Call these from Commands.
     
     public void Ball_launcherout(double x){
-    	control_Mech.set(x);
+    	control_Mech.set(x);	
     }
     
     public void Ball_launcherin(double x){
