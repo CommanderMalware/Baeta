@@ -43,7 +43,7 @@ public class Ball_Mech extends Subsystem {
     }
     
     public void Ball_launcherin(double x){
-    	control_Mech.set(-x*.5);
+    	control_Mech.set(-x*.8);
     }
    
     public void initDefaultCommand() {

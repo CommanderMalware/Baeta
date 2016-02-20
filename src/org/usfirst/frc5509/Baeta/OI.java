@@ -80,7 +80,6 @@ public class OI {
 		joystickButton4 = new JoystickButton(joystick2, 4);
 
 		// SmartDashboard Buttons
-		SmartDashboard.putData("Autonomous Command", new AutonomousCommand());
 		SmartDashboard.putData("WenchUp", new WenchUp());
 		SmartDashboard.putData("WenchDown", new WenchDown());
 
