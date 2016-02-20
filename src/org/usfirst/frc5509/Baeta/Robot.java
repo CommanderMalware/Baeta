@@ -161,8 +161,8 @@ public class Robot extends IterativeRobot {
 		// JOYSTICK 1
 		double y = oi.joystick1.getRawAxis(1);
 		double x = oi.joystick1.getRawAxis(4);
-		oi.joystickButton5.whenPressed(wheelieBarOut);
-		oi.joystickButton6.whenPressed(wheelieBarIn);
+		oi.joystickButton5.whenPressed(wheelieBarIn);
+		oi.joystickButton6.whenPressed(wheelieBarOut);
 
 		// JOYSTICK 2 LAUNCH
 		double ball_launchin = oi.joystick2.getRawAxis(2);
@@ -172,17 +172,18 @@ public class Robot extends IterativeRobot {
 		// oi.joystickButton6.whenPressed(ballPokeOut);
 		double g = oi.joystick2.getRawAxis(1);
 		double e = oi.joystick2.getRawAxis(5);
-		ballBox.MoveBallBox(g);
-		weainch.MoveWench(e);
+		ballBox.MoveBallBox(e);
+		weainch.MoveWench(g);
 
 		// Drive Robot
 		drive.DriveRobot(x, y);
 
 		// Ball_Mech
-
-		if (ball_launchout == 0) {
+			
+		if (ball_launchin != 0) {
 			ball_Mech.Ball_launcherin(ball_launchin);
 			
+			//FIXED
 			try {
 				Thread.sleep(800);
 			} catch (InterruptedException e1) {
@@ -194,9 +195,10 @@ public class Robot extends IterativeRobot {
 				
 			} else {Robot.pneumatic.set(DoubleSolenoid.Value.kForward);}
 			
-		} else if (ball_launchin == 0) {
+		} else if (ball_launchout != 0) {
 			ball_Mech.Ball_launcherout(ball_launchout);
 			
+			//FIXED, Yet not. We must move thread.sleep into a different place or fire pneumatis on its own button.
 			try {
 				Thread.sleep(800);
 			} catch (InterruptedException e1) {
