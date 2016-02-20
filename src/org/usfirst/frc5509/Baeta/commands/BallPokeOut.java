@@ -47,7 +47,9 @@ public class BallPokeOut extends Command {
 	protected void end() {
 		if(Robot.pneumatic.equals(DoubleSolenoid.Value.kForward)){
 			
-		} else {Robot.pneumatic.set(DoubleSolenoid.Value.kForward);}
+		} else {
+			Robot.pneumatic.set(DoubleSolenoid.Value.kForward);
+			}
 	}
 
 	// Called when another command which requires one or more of the same

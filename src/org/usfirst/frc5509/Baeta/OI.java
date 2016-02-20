@@ -55,6 +55,8 @@ public class OI {
 	public JoystickButton joystickButton4;
 	public JoystickButton joystickButton5;
 	public JoystickButton joystickButton6;
+	public JoystickButton joystickButton7;
+	public JoystickButton joystickButton8;
 	public Joystick joystick1;
 	public Joystick joystick2;
 
@@ -74,9 +76,7 @@ public class OI {
 
 		// JOYSTICK 2
 		joystickButton2 = new JoystickButton(joystick2, 2);
-		joystickButton2.whileHeld(new WenchDown());
 		joystickButton1 = new JoystickButton(joystick2, 1);
-		joystickButton1.whileHeld(new WenchUp());
 		joystickButton4 = new JoystickButton(joystick2, 4);
 
 		// SmartDashboard Buttons

@@ -48,9 +48,9 @@ public class BallBox extends Subsystem {
     
     public void MoveBallBox(double y)
     {
-    	y = y * 1;
+    	y = y * .7;
     	
-    	if(y < .15 && y > -.15){
+    	if(y < .2 && y > -.2){
     		y = 0;
     	}
     	
