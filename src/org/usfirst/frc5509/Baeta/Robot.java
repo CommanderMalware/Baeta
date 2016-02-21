@@ -183,8 +183,6 @@ public class Robot extends IterativeRobot {
 
 			// wench
 			//SmartDashboard.putNumber("Reading before wench", 1);
-			oi.joystickButton1.whileHeld(wenchUp);
-			oi.joystickButton2.whileHeld(wenchDown);
 			oi.joystickButton4.whenPressed(wenchStop);
 			
 			

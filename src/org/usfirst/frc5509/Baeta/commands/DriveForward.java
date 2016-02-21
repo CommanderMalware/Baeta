@@ -49,7 +49,7 @@ public class DriveForward extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.drive.DriveRobot(0,.5);
+    	Robot.drive.DriveRobot(0,-.8); //Drives forward
     	
     }
 

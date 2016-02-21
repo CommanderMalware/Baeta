@@ -54,7 +54,7 @@ public class Weainch extends Subsystem {
     
     public void MoveWench(double y)
     {
-    	y = y * .7;
+    	y = y * .65;
     	
     	if(y < .2 && y > -.2){
     		y = 0;
