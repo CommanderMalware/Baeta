@@ -47,23 +47,28 @@ public class DriveForwardDis extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	Encode.get();
     	Robot.drive.DriveRobot(1,0);
-    	//Timer.delay(2);
-    	Robot.drive.DriveRobot(0, 0);
+    	
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+    	if(Encode.get() > 3000){
+    		return true;
+    	}
+    	return false;
     }
 
     // Called once after isFinished returns true
     protected void end() {
+    	Robot.drive.DriveRobot(0, 0);
     }
 
     // Called when another command which requires one or more of the same

@@ -169,8 +169,25 @@ public class Robot extends IterativeRobot {
 		// teleop starts running. If you want the autonomous to
 		// continue until interrupted by another command, remove
 		// this line or comment it out.
-		if (autonomousCommand != null)
 			autonomousCommand.cancel();
+			
+			//Wheelie Bar In and Out
+			oi.joystickButton5.whenPressed(wheelieBarIn);
+			oi.joystickButton6.whenPressed(wheelieBarOut);
+
+			// ADD POKE TO LAUNCH
+			oi.joystickButton1.whileHeld(ballPokeOut);
+			oi.joystickButton1.whenReleased(ballPokeIn);
+
+			
+
+			// wench
+			//SmartDashboard.putNumber("Reading before wench", 1);
+			oi.joystickButton1.whileHeld(wenchUp);
+			oi.joystickButton2.whileHeld(wenchDown);
+			oi.joystickButton4.whenPressed(wenchStop);
+			
+			
 	}
 
 	/**
@@ -192,23 +209,11 @@ public class Robot extends IterativeRobot {
 		double ball_launchin = oi.joystick2.getRawAxis(2);
 		double ball_launchout = oi.joystick2.getRawAxis(3);
 		
-		//Buttons
-
-		//Wheelie Bar In and Out
-		oi.joystickButton5.whenPressed(wheelieBarIn);
-		oi.joystickButton6.whenPressed(wheelieBarOut);
-
-		// ADD POKE TO LAUNCH
-		oi.joystickButton1.whileHeld(ballPokeOut);
-		oi.joystickButton1.whenReleased(ballPokeIn);
+		// Drive Robot
+		drive.DriveRobot(x, y);
 
 		
-
-		// wench
-		SmartDashboard.putNumber("Reading before wench", 1);
-		oi.joystickButton1.whileHeld(wenchUp);
-		oi.joystickButton2.whileHeld(wenchDown);
-		oi.joystickButton4.whenPressed(wenchStop);
+		//Buttons have been moved to TeleopInt to save memory. Only need to be called once.
 
 		// BallBox movement up and down. Limit switch at top.
 		/*if (LimswitchBoxTop.get() == true) {
@@ -225,9 +230,7 @@ public class Robot extends IterativeRobot {
 		// Wench movement up and down
 		weainch.MoveWench(g);
 
-		// Drive Robot
-		drive.DriveRobot(x, y);
-
+		
 		// Ball_Mech
 
 		if (ball_launchout == 0) {
