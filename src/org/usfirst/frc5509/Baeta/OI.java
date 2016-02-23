@@ -57,6 +57,7 @@ public class OI {
 	public JoystickButton joystickButton6;
 	public JoystickButton joystickButton7;
 	public JoystickButton joystickButton8;
+	public JoystickButton joystickButtonDrive;
 	public Joystick joystick1;
 	public Joystick joystick2;
 
@@ -73,6 +74,8 @@ public class OI {
 		joystickButton5.whileHeld(new WheelieBarOut());
 		joystickButton6 = new JoystickButton(joystick1, 2);
 		joystickButton6.whileHeld(new WheelieBarIn());
+		joystickButtonDrive = new JoystickButton(joystick1, 3);
+		
 
 		// JOYSTICK 2
 		joystickButton2 = new JoystickButton(joystick2, 2);

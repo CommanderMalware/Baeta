@@ -60,7 +60,7 @@ public class Robot extends IterativeRobot {
 	public static Weainch weainch;
 	public static Ball_Mech ball_Mech;
 	public static GyroSubsystem gyro1;
-	public static Encoder EncodeLeft;
+	public static Encoder Encode;
 	public static DoubleSolenoid pneumatic;
 	public static DoubleSolenoid pneumatic2;
 	public static BallBox ballBox;
@@ -82,7 +82,7 @@ public class Robot extends IterativeRobot {
 		ball_Mech = new Ball_Mech();
 		weainch = new Weainch();
 		ballBox = new BallBox();
-		//EncodeLeft = new Encoder(0, 1);
+		Encode = new Encoder(0, 1);
 		wenchUp = new WenchUp();
 		wenchDown = new WenchDown();
 		wenchStop = new WenchStop();
@@ -227,7 +227,7 @@ public class Robot extends IterativeRobot {
 			ballBox.MoveBallBox(e);
 		// Wench movement up and down
 		weainch.MoveWench(g);
-
+		
 		
 		// Ball_Mech
 
@@ -240,7 +240,7 @@ public class Robot extends IterativeRobot {
 		}
 
 		// SmartDashBoard Stuff
-		// SmartDashboard.putNumber("Gyro Reading", gyro1.getValue());
+		 SmartDashboard.putNumber("Gyro Reading", gyro1.getValue());
 		// SmartDashboard.putNumber("Encoder value", Encode.get());
 
 	}

@@ -11,12 +11,14 @@
 
 package org.usfirst.frc5509.Baeta.subsystems;
 
+import org.usfirst.frc5509.Baeta.Robot;
 import org.usfirst.frc5509.Baeta.RobotMap;
+
 import org.usfirst.frc5509.Baeta.commands.*;
+
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.SpeedController;
 import edu.wpi.first.wpilibj.Talon;
-
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 
@@ -42,8 +44,15 @@ public class Drive extends Subsystem {
     
     public void DriveRobot(double x, double y)
     {
-    	y = y * 1;
-    	x = x * 1;
+    	if(Robot.oi.joystickButtonDrive.get() == true){
+    		y = y * .5;
+    		x = x * .5;
+    	}
+    	else{
+    		y = y * 1;
+        	x = x * 1;
+    	}
+    	
     	
     	if(y < .15 && y > -.15){
     		y = 0;
