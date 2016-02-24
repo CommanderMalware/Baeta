@@ -53,8 +53,8 @@ public class RobotMap {
         
         driveRobotDrive21 = new RobotDrive(driveLeftDrive, driveRightDrive);
         
-        driveRobotDrive21.setSafetyEnabled(true);
-        driveRobotDrive21.setExpiration(0.1);
+        //driveRobotDrive21.setSafetyEnabled(true);
+        //driveRobotDrive21.setExpiration(0.1);
         driveRobotDrive21.setSensitivity(0.5);
         driveRobotDrive21.setMaxOutput(1.0);
 
@@ -64,9 +64,6 @@ public class RobotMap {
         
         ball_MechControl_Mech = new Talon(2);
         LiveWindow.addActuator("Ball_Mech", "Control_Mech", (Talon) ball_MechControl_Mech);
-        
-        subsystem1Gyro1 = new ADXRS450_Gyro();
-        LiveWindow.addSensor("Subsystem 1", "Gyro 1", (LiveWindowSendable) subsystem1Gyro1);
 
         ballBox = new Talon(4);
         LiveWindow.addActuator("BallBox", "BoxWench", (Talon) ballBox);

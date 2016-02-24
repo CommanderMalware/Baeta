@@ -44,12 +44,12 @@ public class DriveForward extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	this.setTimeout(1);
+    	this.setTimeout(2);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.drive.DriveRobot(0,-.8); //Drives forward
+    	Robot.drive.DriveRobot(0,-.5); //Drives forward
     	
     }
 

@@ -54,11 +54,11 @@ public class Weainch extends Subsystem {
     
     public void MoveWench(double y)
     {
-    	y = y * .65;
-    	
-    	if(y < .2 && y > -.2){
+    	if(y < .3 && y > -.3){
     		y = 0;
     	}
+    	
+    	y = y * .4;
     	
     	wench.set(y);
     }

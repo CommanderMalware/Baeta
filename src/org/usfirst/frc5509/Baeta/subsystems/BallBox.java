@@ -39,11 +39,15 @@ public class BallBox extends Subsystem {
     // here. Call these from Commands.
 
     public static void moveBoxUp(){
-    	box.set(.2);
+    	box.set(-.2);
     }
     
     public static void moveBoxDown(){
-    	box.set(-.2);
+    	box.set(.2);
+    }
+    
+    public static void stop(){
+    	box.set(0);
     }
     
     public void MoveBallBox(double y)

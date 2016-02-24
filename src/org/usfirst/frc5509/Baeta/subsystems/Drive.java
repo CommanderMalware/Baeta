@@ -45,8 +45,8 @@ public class Drive extends Subsystem {
     public void DriveRobot(double x, double y)
     {
     	if(Robot.oi.joystickButtonDrive.get() == true){
-    		y = y * .5;
-    		x = x * .5;
+    		y = y * .7;
+    		x = x * .7;
     	}
     	else{
     		y = y * 1;
